@@ -4,9 +4,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { NAV_ITEMS, SITE } from "@/lib/site-config";
+import { NAV_ITEMS } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { BrandLink } from "@/components/brand-link";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -15,9 +16,7 @@ export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 lg:px-12">
-        <Link href="/" className="text-lg font-semibold tracking-tight">
-          {SITE.name}
-        </Link>
+        <BrandLink />
 
         <nav className="hidden items-center gap-6 md:flex" aria-label="Main">
           {NAV_ITEMS.map((item) => (

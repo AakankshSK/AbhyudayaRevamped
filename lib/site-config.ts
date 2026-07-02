@@ -1,5 +1,6 @@
 export const SITE = {
   name: "Abhyudaya CMS",
+  logoSrc: "/images/Abhyudayacms_logo.png",
   legalName: "Abhyudaya Consultants & Management Services",
   tagline: "Your Single-Window Growth Partner",
   email: "abhyudayacms@gmailcom",

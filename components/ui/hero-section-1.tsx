@@ -4,6 +4,7 @@ import { ArrowRight, ChevronRight, Menu } from "lucide-react";
 import { NAV_ITEMS, SITE } from "@/lib/site-config";
 import { Button } from "@/components/ui/button";
 import { AnimatedGroup } from "@/components/ui/animated-group";
+import { BrandLink } from "@/components/brand-link";
 
 const HERO_BG_IMAGE =
   "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=80";
@@ -23,9 +24,7 @@ export function HeroSection() {
 
       <header className="relative z-10 border-b border-border/50 bg-background/60 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 lg:px-12">
-          <Link href="/" className="text-lg font-semibold tracking-tight">
-            {SITE.name}
-          </Link>
+          <BrandLink />
           <nav className="hidden items-center gap-6 md:flex" aria-label="Main">
             {NAV_ITEMS.map((item) => (
               <Link
