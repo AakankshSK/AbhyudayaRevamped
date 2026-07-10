@@ -14,7 +14,7 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b bg-background/80 backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6 lg:px-12">
         <BrandLink />
 
@@ -24,10 +24,10 @@ export function SiteHeader() {
               key={item.href}
               href={item.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-foreground",
+                "nav-link",
                 pathname === item.href
-                  ? "text-foreground"
-                  : "text-muted-foreground"
+                  ? "nav-link-active text-secondary"
+                  : "text-muted-foreground hover:text-foreground"
               )}
             >
               {item.label}
@@ -62,10 +62,10 @@ export function SiteHeader() {
                 <Link
                   href={item.href}
                   className={cn(
-                    "block text-sm font-medium",
+                    "block text-sm font-medium transition-colors",
                     pathname === item.href
-                      ? "text-foreground"
-                      : "text-muted-foreground"
+                      ? "text-secondary"
+                      : "text-muted-foreground hover:text-foreground"
                   )}
                   onClick={() => setOpen(false)}
                 >

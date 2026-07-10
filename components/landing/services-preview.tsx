@@ -29,8 +29,8 @@ export function ServicesPreview() {
             const Icon = service.icon;
             return (
               <FadeInSection key={service.id} delay={index * 0.05}>
-                <article className="flex h-full flex-col rounded-xl border bg-card p-6 shadow-sm transition-shadow hover:shadow-md">
-                  <div className="mb-4 inline-flex w-fit rounded-lg bg-primary/10 p-3 text-primary">
+                <article className="card-premium card-premium-accent flex h-full flex-col p-6">
+                  <div className="mb-4 inline-flex w-fit rounded-lg bg-secondary/10 p-3 text-secondary">
                     <Icon className="size-6" aria-hidden />
                   </div>
                   <h3 className="text-lg font-semibold">{service.title}</h3>
@@ -39,7 +39,7 @@ export function ServicesPreview() {
                   </p>
                   <Link
                     href={`/services#${service.categoryId}`}
-                    className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
+                    className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-secondary transition-colors hover:text-accent"
                   >
                     Learn more
                     <ArrowRight className="size-4" aria-hidden />

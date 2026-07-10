@@ -17,8 +17,8 @@ function ServiceCard({
   icon: LucideIcon;
 }) {
   return (
-    <article className="rounded-xl border bg-card p-6 shadow-sm transition-shadow hover:shadow-md">
-      <div className="mb-4 inline-flex rounded-lg bg-primary/10 p-3 text-primary">
+    <article className="card-premium card-premium-accent bg-gradient-to-br from-card to-muted/30 p-6">
+      <div className="mb-4 inline-flex rounded-lg bg-secondary/10 p-3 text-secondary">
         <Icon className="size-6" aria-hidden />
       </div>
       <h3 className="text-lg font-semibold">{title}</h3>
@@ -34,7 +34,7 @@ function BulletList({ items }: { items: string[] }) {
     <ul className="mt-4 grid gap-3 sm:grid-cols-2" role="list">
       {items.map((item) => (
         <li key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
-          <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden />
+          <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-success" aria-hidden />
           <span>{item}</span>
         </li>
       ))}
@@ -141,7 +141,7 @@ export function ServicesGrid() {
             {whyChooseAbhyudaya.points.map((point) => (
               <article
                 key={point.title}
-                className="rounded-xl border bg-card p-6 shadow-sm"
+                className="rounded-xl border border-primary-foreground/10 bg-primary-foreground/5 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-corporate"
               >
                 <h3 className="font-semibold">{point.title}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">

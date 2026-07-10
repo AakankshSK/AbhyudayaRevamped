@@ -45,8 +45,8 @@ export function FeaturesSection() {
             const Icon = feature.icon;
             return (
               <FadeInSection key={feature.title} delay={index * 0.05}>
-                <article className="rounded-xl border bg-card p-6 shadow-sm">
-                  <div className="mb-4 inline-flex rounded-lg bg-primary/10 p-3 text-primary">
+                <article className="card-premium card-premium-accent p-6">
+                  <div className="mb-4 inline-flex rounded-lg bg-secondary/10 p-3 text-secondary">
                     <Icon className="size-6" aria-hidden />
                   </div>
                   <h3 className="font-semibold">{feature.title}</h3>

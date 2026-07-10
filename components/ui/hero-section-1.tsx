@@ -30,7 +30,7 @@ export function HeroSection() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                className="nav-link text-muted-foreground hover:text-foreground"
               >
                 {item.label}
               </Link>
@@ -54,11 +54,12 @@ export function HeroSection() {
 
       <div className="relative z-10 mx-auto flex max-w-6xl flex-col items-center px-6 pb-24 pt-20 text-center lg:px-12 lg:pt-28">
         <AnimatedGroup>
-          <p className="text-sm font-medium uppercase tracking-wider text-primary">
+          <p className="text-sm font-medium uppercase tracking-wider text-secondary">
             {SITE.legalName}
           </p>
           <h1 className="mt-4 max-w-4xl text-4xl font-semibold tracking-tight md:text-5xl lg:text-6xl">
-            {SITE.tagline}
+            Your{" "}
+            <span className="text-accent">Single-Window</span> Growth Partner
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
             End-to-end business consulting, operational management, and

@@ -11,9 +11,9 @@ export function BrandLink() {
       <Image
         src={SITE.logoSrc}
         alt="Abhyudaya CMS Logo"
-        width={40}
-        height={40}
-        className="h-7 w-auto sm:h-[30px] lg:h-9"
+        width={48}
+        height={48}
+        className="h-[38px] w-auto sm:h-[42px] lg:h-[46px]"
       />
       {SITE.name}
     </Link>
