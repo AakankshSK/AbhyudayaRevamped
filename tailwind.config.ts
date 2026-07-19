@@ -32,11 +32,14 @@ export default {
       boxShadow: {
         "inset-2xs": "inset 0 1px 2px 0 rgb(0 0 0 / 0.05)",
         "inset-white/20": "inset 0 1px 2px 0 rgb(255 255 255 / 0.2)",
-        corporate: "0 4px 14px 0 rgba(15, 45, 82, 0.08)",
-        "corporate-lg": "0 8px 24px 0 rgba(15, 45, 82, 0.12)",
+        corporate: "0 4px 14px 0 rgba(18, 53, 91, 0.08)",
+        "corporate-lg": "0 8px 24px 0 rgba(18, 53, 91, 0.12)",
       },
       blur: {
         xs: "2px",
+      },
+      transitionDuration: {
+        250: "250ms",
       },
     },
   },

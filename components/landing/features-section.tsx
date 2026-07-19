@@ -1,5 +1,6 @@
 import { CheckCircle2, Layers, Users, Zap } from "lucide-react";
 import { FadeInSection } from "@/components/ui/fade-in-section";
+import { SectionIntro } from "@/components/section-intro";
 
 const features = [
   {
@@ -30,29 +31,30 @@ const features = [
 
 export function FeaturesSection() {
   return (
-    <section className="border-t bg-muted/20 py-20" aria-labelledby="features-heading">
+    <section
+      className="border-t bg-muted/20 section-shell"
+      aria-labelledby="features-heading"
+    >
       <div className="mx-auto max-w-6xl px-6 lg:px-12">
         <FadeInSection>
-          <h2
-            id="features-heading"
-            className="text-center text-3xl font-semibold tracking-tight md:text-4xl"
-          >
-            Why businesses choose us
-          </h2>
+          <SectionIntro
+            as="h2"
+            titleId="features-heading"
+            title="Why businesses choose us"
+            align="center"
+          />
         </FadeInSection>
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid auto-rows-fr gap-6 sm:grid-cols-2 lg:grid-cols-4 md:mt-12">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
               <FadeInSection key={feature.title} delay={index * 0.05}>
-                <article className="card-premium card-premium-accent p-6">
-                  <div className="mb-4 inline-flex rounded-lg bg-secondary/10 p-3 text-secondary">
+                <article className="card-premium card-premium-accent">
+                  <div className="icon-badge">
                     <Icon className="size-6" aria-hidden />
                   </div>
-                  <h3 className="font-semibold">{feature.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">
-                    {feature.description}
-                  </p>
+                  <h3 className="card-title">{feature.title}</h3>
+                  <p className="card-body">{feature.description}</p>
                 </article>
               </FadeInSection>
             );

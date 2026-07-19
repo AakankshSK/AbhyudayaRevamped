@@ -5,28 +5,31 @@ import { Button } from "@/components/ui/button";
 
 export function CtaSection() {
   return (
-    <section className="border-t bg-primary py-20 text-primary-foreground" aria-labelledby="cta-heading">
+    <section
+      className="border-t bg-primary section-shell text-primary-foreground"
+      aria-labelledby="cta-heading"
+    >
       <div className="mx-auto max-w-3xl px-6 text-center lg:px-12">
         <FadeInSection>
-          <h2 id="cta-heading" className="text-3xl font-semibold tracking-tight md:text-4xl">
+          <h2
+            id="cta-heading"
+            className="text-3xl font-semibold tracking-tight md:text-4xl"
+          >
             Ready to grow with Abhyudaya CMS?
           </h2>
-          <p className="mt-4 text-primary-foreground/80">
+          <div className="divider-gold-center mt-4" aria-hidden />
+          <p className="prose-measure mt-4 leading-[1.7] text-primary-foreground/80">
             {whyChooseAbhyudaya.closing}
           </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <Button
-              asChild
-              size="lg"
-              className="bg-accent text-accent-foreground hover:bg-accent/90"
-            >
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3 md:gap-4">
+            <Button asChild size="lg" variant="secondary">
               <Link href="/contact">Get in touch</Link>
             </Button>
             <Button
               asChild
               size="lg"
               variant="outline"
-              className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10"
+              className="border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
             >
               <Link href="/services">Explore services</Link>
             </Button>

@@ -2,44 +2,37 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { featuredServices } from "@/lib/services-data";
 import { FadeInSection } from "@/components/ui/fade-in-section";
+import { SectionIntro } from "@/components/section-intro";
 import { Button } from "@/components/ui/button";
 
 export function ServicesPreview() {
   return (
-    <section className="py-20" aria-labelledby="services-preview-heading">
+    <section className="section-shell" aria-labelledby="services-preview-heading">
       <div className="mx-auto max-w-6xl px-6 lg:px-12">
         <FadeInSection>
-          <div className="text-center">
-            <h2
-              id="services-preview-heading"
-              className="text-3xl font-semibold tracking-tight md:text-4xl"
-            >
-              Our Services
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-              Your single-window growth partner for consulting, operations,
-              investments, renewable energy, agriculture, and property
-              management.
-            </p>
-          </div>
+          <SectionIntro
+            as="h2"
+            titleId="services-preview-heading"
+            title="Our Services"
+            description="Your single-window growth partner for consulting, operations, investments, renewable energy, agriculture, and property management."
+            align="center"
+          />
         </FadeInSection>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid auto-rows-fr gap-6 sm:grid-cols-2 lg:grid-cols-3 md:mt-12">
           {featuredServices.map((service, index) => {
             const Icon = service.icon;
             return (
               <FadeInSection key={service.id} delay={index * 0.05}>
-                <article className="card-premium card-premium-accent flex h-full flex-col p-6">
-                  <div className="mb-4 inline-flex w-fit rounded-lg bg-secondary/10 p-3 text-secondary">
+                <article className="card-premium card-premium-accent">
+                  <div className="icon-badge">
                     <Icon className="size-6" aria-hidden />
                   </div>
-                  <h3 className="text-lg font-semibold">{service.title}</h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
-                    {service.description}
-                  </p>
+                  <h3 className="card-title">{service.title}</h3>
+                  <p className="card-body">{service.description}</p>
                   <Link
                     href={`/services#${service.categoryId}`}
-                    className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-secondary transition-colors hover:text-accent"
+                    className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary transition-colors duration-250 hover:text-secondary"
                   >
                     Learn more
                     <ArrowRight className="size-4" aria-hidden />
@@ -51,7 +44,7 @@ export function ServicesPreview() {
         </div>
 
         <FadeInSection delay={0.2}>
-          <div className="mt-10 text-center">
+          <div className="mt-8 text-center md:mt-10">
             <Button asChild variant="outline">
               <Link href="/services">View all services</Link>
             </Button>

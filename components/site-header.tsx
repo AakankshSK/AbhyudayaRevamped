@@ -27,7 +27,7 @@ export function SiteHeader() {
                 "nav-link",
                 pathname === item.href
                   ? "nav-link-active text-secondary"
-                  : "text-muted-foreground hover:text-foreground"
+                  : "text-primary/80 hover:text-primary"
               )}
             >
               {item.label}
@@ -43,7 +43,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 md:hidden"
+          className="inline-flex items-center justify-center rounded-md p-2 text-primary md:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen(!open)}
         >
@@ -62,10 +62,10 @@ export function SiteHeader() {
                 <Link
                   href={item.href}
                   className={cn(
-                    "block text-sm font-medium transition-colors",
+                    "block text-sm font-medium transition-colors duration-250",
                     pathname === item.href
                       ? "text-secondary"
-                      : "text-muted-foreground hover:text-foreground"
+                      : "text-primary/80 hover:text-secondary"
                   )}
                   onClick={() => setOpen(false)}
                 >
@@ -74,7 +74,7 @@ export function SiteHeader() {
               </li>
             ))}
             <li>
-              <Button asChild className="w-full" size="sm">
+              <Button asChild className="w-full" size="sm" variant="secondary">
                 <Link href="/contact" onClick={() => setOpen(false)}>
                   Contact us
                 </Link>

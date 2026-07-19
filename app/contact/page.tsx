@@ -4,6 +4,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { ContactForm } from "@/components/contact-form";
 import { ContactMapSection } from "@/components/contact-map-section";
 import { FadeInSection } from "@/components/ui/fade-in-section";
+import { SectionIntro } from "@/components/section-intro";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -16,21 +17,18 @@ export default function ContactPage() {
     <>
       <SiteHeader />
       <main className="min-h-screen pt-24 md:pt-28">
-        <div className="mx-auto max-w-3xl px-6 pb-20 lg:px-12">
-          <section className="py-16" aria-labelledby="contact-heading">
+        <div className="page-container-narrow">
+          <section className="section-shell" aria-labelledby="contact-heading">
             <FadeInSection>
-              <h1
-                id="contact-heading"
-                className="text-3xl font-semibold tracking-tight md:text-4xl"
-              >
-                Contact us
-              </h1>
-              <p className="mt-4 text-muted-foreground">
-                Have a project in mind or a question? Fill out the form below and we&apos;ll get back to you soon!
-              </p>
+              <SectionIntro
+                titleId="contact-heading"
+                title="Contact us"
+                description="Have a project in mind or a question? Fill out the form below and we'll get back to you soon!"
+                align="left"
+              />
             </FadeInSection>
             <FadeInSection delay={0.1}>
-              <div className="mt-10">
+              <div className="mt-8 md:mt-10">
                 <ContactForm />
               </div>
             </FadeInSection>

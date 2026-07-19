@@ -3,6 +3,9 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
+const inputClassName =
+  "mt-2 w-full rounded-md border border-input bg-card px-3 py-2 text-sm text-foreground transition-colors duration-250 focus:border-secondary focus:outline-none focus:ring-2 focus:ring-secondary/30";
+
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [error, setError] = useState("");
@@ -43,7 +46,7 @@ export function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium">
+          <label htmlFor="name" className="block text-sm font-medium text-primary">
             Name <span className="text-destructive">*</span>
           </label>
           <input
@@ -51,11 +54,11 @@ export function ContactForm() {
             name="name"
             type="text"
             required
-            className="mt-2 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+            className={inputClassName}
           />
         </div>
         <div>
-          <label htmlFor="email" className="block text-sm font-medium">
+          <label htmlFor="email" className="block text-sm font-medium text-primary">
             Email <span className="text-destructive">*</span>
           </label>
           <input
@@ -63,23 +66,23 @@ export function ContactForm() {
             name="email"
             type="email"
             required
-            className="mt-2 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+            className={inputClassName}
           />
         </div>
       </div>
       <div>
-        <label htmlFor="phone" className="block text-sm font-medium">
+        <label htmlFor="phone" className="block text-sm font-medium text-primary">
           Phone
         </label>
         <input
           id="phone"
           name="phone"
           type="tel"
-          className="mt-2 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+          className={inputClassName}
         />
       </div>
       <div>
-        <label htmlFor="message" className="block text-sm font-medium">
+        <label htmlFor="message" className="block text-sm font-medium text-primary">
           Message <span className="text-destructive">*</span>
         </label>
         <textarea
@@ -87,11 +90,11 @@ export function ContactForm() {
           name="message"
           rows={5}
           required
-          className="mt-2 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+          className={inputClassName}
         />
       </div>
       {status === "success" && (
-        <p className="text-sm text-green-600" role="status">
+        <p className="text-sm text-secondary" role="status">
           Thank you! Your message has been sent.
         </p>
       )}
@@ -100,7 +103,7 @@ export function ContactForm() {
           {error}
         </p>
       )}
-      <Button type="submit" disabled={status === "loading"}>
+      <Button type="submit" variant="secondary" disabled={status === "loading"}>
         {status === "loading" ? "Sending…" : "Send message"}
       </Button>
     </form>

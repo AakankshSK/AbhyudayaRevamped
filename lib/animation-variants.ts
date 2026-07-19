@@ -12,7 +12,7 @@ export const splashLogoVariants: Variants = {
   glow: {
     opacity: 1,
     scale: 1.05,
-    filter: "drop-shadow(0 0 18px rgba(212, 160, 23, 0.35))",
+    filter: "drop-shadow(0 0 18px rgba(15, 138, 95, 0.35))",
     transition: { duration: 0.5, ease: easeCorporate },
   },
 };

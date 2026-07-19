@@ -61,7 +61,7 @@ export function LoadingScreen() {
           variants={splashTextVariants}
           initial="hidden"
           animate="visible"
-          className="mt-6 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl"
+          className="mt-6 text-2xl font-semibold tracking-tight text-primary sm:text-3xl"
         >
           {SITE.name}
         </motion.h1>

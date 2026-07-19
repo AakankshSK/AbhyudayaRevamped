@@ -57,9 +57,9 @@ export function HeroSection() {
           <p className="text-sm font-medium uppercase tracking-wider text-secondary">
             {SITE.legalName}
           </p>
-          <h1 className="mt-4 max-w-4xl text-4xl font-semibold tracking-tight md:text-5xl lg:text-6xl">
+          <h1 className="mt-4 max-w-4xl text-4xl font-semibold tracking-tight text-primary md:text-5xl lg:text-6xl">
             Your{" "}
-            <span className="text-accent">Single-Window</span> Growth Partner
+            <span className="text-secondary">Single-Window</span> Growth Partner
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
             End-to-end business consulting, operational management, and

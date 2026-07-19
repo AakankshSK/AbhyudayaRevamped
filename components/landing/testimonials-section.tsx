@@ -1,4 +1,5 @@
 import { FadeInSection } from "@/components/ui/fade-in-section";
+import { SectionIntro } from "@/components/section-intro";
 
 const testimonials = [
   {
@@ -23,24 +24,30 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section className="py-20" aria-labelledby="testimonials-heading">
+    <section className="section-shell" aria-labelledby="testimonials-heading">
       <div className="mx-auto max-w-6xl px-6 lg:px-12">
         <FadeInSection>
-          <h2
-            id="testimonials-heading"
-            className="text-center text-3xl font-semibold tracking-tight md:text-4xl"
-          >
-            What our clients say
-          </h2>
+          <SectionIntro
+            as="h2"
+            titleId="testimonials-heading"
+            title="What our clients say"
+            align="center"
+          />
         </FadeInSection>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid auto-rows-fr gap-6 md:grid-cols-3 md:mt-12">
           {testimonials.map((item, index) => (
             <FadeInSection key={item.author} delay={index * 0.05}>
-              <blockquote className="flex h-full flex-col rounded-xl border bg-card p-6 shadow-sm">
-                <p className="flex-1 text-muted-foreground">&ldquo;{item.quote}&rdquo;</p>
+              <blockquote className="card-premium card-premium-accent">
+                <p className="flex-1 leading-relaxed text-muted-foreground">
+                  &ldquo;{item.quote}&rdquo;
+                </p>
                 <footer className="mt-4 border-t pt-4">
-                  <cite className="not-italic font-semibold">{item.author}</cite>
-                  <p className="text-sm text-muted-foreground">{item.role}</p>
+                  <cite className="not-italic font-semibold text-primary">
+                    {item.author}
+                  </cite>
+                  <p className="mt-0.5 text-sm text-muted-foreground">
+                    {item.role}
+                  </p>
                 </footer>
               </blockquote>
             </FadeInSection>
