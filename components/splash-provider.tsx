@@ -30,7 +30,10 @@ export function SplashProvider({ children }: SplashProviderProps) {
   }, [mounted, prefersReducedMotion]);
 
   useEffect(() => {
-    if (!showSplash) return;
+    if (!showSplash) {
+      document.body.style.overflow = "";
+      return;
+    }
     document.body.style.overflow = "hidden";
     return () => {
       document.body.style.overflow = "";
@@ -49,7 +52,12 @@ export function SplashProvider({ children }: SplashProviderProps) {
   }, [showSplash, prefersReducedMotion, handleSplashComplete]);
 
   if (!mounted) {
-    return <div className="opacity-0">{children}</div>;
+    // Avoid flash + never block touches before hydration completes splash logic
+    return (
+      <div className="opacity-0 pointer-events-none" aria-hidden>
+        {children}
+      </div>
+    );
   }
 
   return (
@@ -63,6 +71,7 @@ export function SplashProvider({ children }: SplashProviderProps) {
         variants={contentRevealVariants}
         initial="hidden"
         animate={contentVisible ? "visible" : "hidden"}
+        className={contentVisible ? undefined : "pointer-events-none"}
       >
         {children}
       </motion.div>

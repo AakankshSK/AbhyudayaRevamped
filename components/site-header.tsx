@@ -45,7 +45,9 @@ export function SiteHeader() {
           type="button"
           className="inline-flex items-center justify-center rounded-md p-2 text-primary md:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
-          onClick={() => setOpen(!open)}
+          aria-expanded={open}
+          aria-controls="mobile-nav"
+          onClick={() => setOpen((prev) => !prev)}
         >
           {open ? <X className="size-5" /> : <Menu className="size-5" />}
         </button>
@@ -53,6 +55,7 @@ export function SiteHeader() {
 
       {open && (
         <nav
+          id="mobile-nav"
           className="border-t bg-background px-6 py-4 md:hidden"
           aria-label="Mobile"
         >

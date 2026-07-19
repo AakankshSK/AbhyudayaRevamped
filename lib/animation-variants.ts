@@ -40,17 +40,19 @@ export const splashTextVariants: Variants = {
 };
 
 export const splashOverlayVariants: Variants = {
-  visible: { opacity: 1 },
+  visible: { opacity: 1, pointerEvents: "auto" as const },
   exit: {
     opacity: 0,
+    pointerEvents: "none" as const,
     transition: { duration: 0.55, ease: easeCorporate },
   },
 };
 
 export const contentRevealVariants: Variants = {
-  hidden: { opacity: 0 },
+  hidden: { opacity: 0, pointerEvents: "none" as const },
   visible: {
     opacity: 1,
+    pointerEvents: "auto" as const,
     transition: { duration: 0.5, ease: easeCorporate },
   },
 };
