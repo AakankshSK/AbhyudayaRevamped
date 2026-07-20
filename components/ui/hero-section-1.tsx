@@ -11,8 +11,7 @@ const HERO_BG_IMAGE =
 
 export function HeroSection() {
   return (
-    <div className="relative min-h-screen overflow-hidden">
-      {/* Shared header owns mobile menu open state + tap handlers */}
+    <div className="relative flex min-h-[72vh] flex-col overflow-hidden md:min-h-[85vh] lg:min-h-[92vh]">
       <SiteHeader />
 
       <Image
@@ -20,25 +19,26 @@ export function HeroSection() {
         alt=""
         fill
         priority
-        className="object-cover"
+        className="object-cover object-center"
         sizes="100vw"
       />
       <div className="absolute inset-0 bg-background/80 backdrop-blur-[2px]" />
 
-      <div className="relative z-10 mx-auto flex max-w-6xl flex-col items-center px-6 pb-24 pt-28 text-center lg:px-12 lg:pt-32">
+      <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col items-center justify-center px-6 py-16 text-center md:py-20 lg:px-12 lg:py-24">
         <AnimatedGroup>
           <p className="text-sm font-medium uppercase tracking-wider text-secondary">
             {SITE.legalName}
           </p>
           <h1 className="mt-4 max-w-4xl text-4xl font-semibold tracking-tight text-primary md:text-5xl lg:text-6xl">
             Your{" "}
-            <span className="text-secondary">Single-Window</span> Growth Partner
+            <span className="font-medium text-secondary/90">Single-Window</span>{" "}
+            Growth Partner
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
+          <p className="mx-auto mt-5 max-w-2xl text-base text-muted-foreground md:mt-6 md:text-lg">
             End-to-end business consulting, operational management, and
             specialized advisory solutions for sustainable growth.
           </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-7 flex flex-wrap items-center justify-center gap-3 md:mt-8 md:gap-4">
             <Button asChild size="lg">
               <Link href="/services">
                 Explore services
@@ -46,7 +46,7 @@ export function HeroSection() {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="/contact">Contact us</Link>
+              <Link href="/about#why-heading">Why Choose Us</Link>
             </Button>
           </div>
         </AnimatedGroup>
