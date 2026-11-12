@@ -173,6 +173,7 @@ export const serviceCategories: ServiceCategory[] = [
     bulletPoints: [
       "Commercial Sourcing & Distribution Advisory",
       "Retail & Brand Visibility Management",
+    ],    
   },
   {
     id: "soil-health-agricultural",
