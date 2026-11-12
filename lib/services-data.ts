@@ -55,81 +55,81 @@ export type ServiceCategory = {
 export const serviceCategories: ServiceCategory[] = [
   {
     id: "strategic-business-engineering",
-    title: "Strategic Business Engineering",
+    title: "Detailed Property & Asset Management",
     items: [
       {
         id: "business-design-innovation",
-        title: "Business Design & Innovation",
+        title: "Farmland & Eco-Agri Management",
         description:
-          "We help transform ideas into sustainable enterprises by designing scalable business models, operational frameworks, and financial structures tailored to your goals.",
+          "End-to-end oversight for agricultural holdings, managed orchards, organic farming setups, soil vitality restoration, and modern agro-infrastructure.",
         icon: Lightbulb,
       },
       {
         id: "management-consulting",
-        title: "Management Consulting",
+        title: "Commercial & Domestic Property Management",
         description:
-          "Our strategic advisory services support leadership teams in navigating organizational challenges, driving transformation, and improving overall business performance.",
+          "Complete tenant management, lease administration, regulatory compliance, routine facility maintenance oversight, and asset value enhancement.",
         icon: Briefcase,
       },
       {
         id: "business-development",
-        title: "Business Development & Market Expansion",
+        title: "Secured Rental Income Plans for Vacant Plots",
         description:
-          "We identify growth opportunities, develop revenue-generation models, and create market-entry strategies that enable businesses to expand confidently into new markets.",
+          "Monetization strategies converting idle/vacant land into steady revenue streams through lease structuring, commercial plot developments, long-term operational leases, and build-to-suit arrangements.",
         icon: TrendingUp,
       },
     ],
   },
   {
     id: "operational-excellence",
-    title: "Operational Excellence",
+    title: "Regional Real Estate & Land Investments (Hubli, Mysore & Sirsi)",
     items: [
       {
         id: "operations-management",
-        title: "Operations Management",
+        title: "Strategic Land Procurement",
         description:
-          "We streamline business operations by optimizing workflows, eliminating inefficiencies, and implementing performance-driven systems that improve productivity and reduce costs.",
+          "Sourcing prime commercial plots, industrial land, and agriculture land with clear title verification and compliance support.",
         icon: Settings,
       },
       {
         id: "office-facility-management",
-        title: "Office & Facility Management",
+        title: "Commercial Land Availability",
         description:
-          "From administrative support and HR coordination to vendor management and policy implementation, we ensure smooth day-to-day operations so your teams can focus on core business objectives.",
+          "Dedicated inventory of highway-facing, institutional, and suburban commercial plots suitable for logistics, godowns, retail centers, and regional hubs in Hubli, Mysore, and Sirsi.",
         icon: Building2,
       },
       {
         id: "turnkey-project-management",
-        title: "Turnkey Project Management",
+        title: "Integrated Agri-Tourism & Resort Land Development",
         description:
-          "From concept to completion, we manage every phase of your project, including planning, execution, resource allocation, and risk management, delivering ready-to-operate solutions on schedule.",
+          "Master planning and revenue-generating agricultural models tailored to regional growth corridors.",
         icon: Hammer,
       },
     ],
   },
   {
     id: "specialized-sector-management",
-    title: "Specialized Sector Management",
+    title: "Outsourced Office & Facility Management",
     items: [
       {
         id: "institution-management",
-        title: "Institution Management",
+        title: "Operational Workflow Optimization",
         description:
-          "We provide customized governance, compliance, and operational frameworks for educational institutions, healthcare facilities, NGOs, and other organizations to ensure efficiency and service excellence.",
+          "Workflow design, administrative coordination, and cost reduction strategies for lean corporate operations.",
         icon: GraduationCap,
       },
       {
         id: "property-management",
-        title: "Property Management",
+        title: "HR & Vendor Management",
         description:
-          "Our property management solutions help protect and enhance asset value through maintenance oversight, tenant coordination, leasing support, and regulatory compliance management.",
+          "Facility maintenance, third-party vendor oversight, administrative policy enforcement, and infrastructure maintenance.",
         icon: Home,
       },
     ],
   },
   {
     id: "market-influence",
-    title: "Market Influence & Brand Visibility",
+    title: "Financial Future & Futuristic Investment Products",
     items: [
       {
         id: "advertisement-promotion",
@@ -142,61 +142,45 @@ export const serviceCategories: ServiceCategory[] = [
   },
   {
     id: "financial-investment-advisory",
-    title: "Financial Future & Investment Advisory",
+    title: "Financial Future & Futuristic Investment Product",
     items: [
       {
         id: "balanced-investment-consultation",
-        title: "Balanced Investment Consultation",
+        title: "Strategic Investment Consultation",
         description:
-          "We assist individuals, startups, and businesses in making informed financial decisions that support both immediate needs and long-term wealth creation.",
+          "Balanced investment advisory tailored for high-growth potential and long-term wealth creation.",
         icon: Scale,
       },
       {
         id: "strategic-financial-planning",
-        title: "Strategic Financial Planning",
+        title: "Risk-Optimized Portfolio Planning",
         description:
-          "Our experts develop customized financial roadmaps aligned with your liquidity requirements, investment objectives, and growth aspirations.",
+          "Capital allocation roadmaps aligned with liquidity requirements, wealth protection, and high-yielding financial products.",
         icon: LineChart,
       },
       {
         id: "risk-return-optimization",
-        title: "Risk & Return Optimization",
-        description:
-          "Through market analysis and portfolio diversification strategies, we help clients balance risk while maximizing potential returns.",
-        icon: Shield,
-      },
-      {
-        id: "capital-support-advisory",
         title: "Capital Support & Advisory",
         description:
-          "We provide guidance on capital allocation, fundraising strategies, investment planning, and financial structuring for startups and established enterprises.",
-        icon: Coins,
+          "Structural guidance on capital allocation and fundraising for growth-stage enterprises.",
+        icon: Shield,
       },
     ],
   },
   {
     id: "renewable-energy",
-    title: "Renewable Energy Solutions",
-    description:
-      "We help businesses, industries, institutions, and communities transition toward sustainable energy solutions through strategic planning and implementation support.",
+    title: "Life Care, Beauty & Commercial Products Needs",
     bulletPoints: [
-      "Solar energy solutions",
-      "Wind energy advisory",
-      "Energy storage systems",
-      "Energy efficiency optimization",
-      "Carbon footprint reduction strategies",
-      "Sustainable operational planning",
-    ],
+      "Commercial Sourcing & Distribution Advisory",
+      "Retail & Brand Visibility Management",
   },
   {
     id: "soil-health-agricultural",
-    title: "Soil Health & Agricultural Advisory",
-    description:
-      "Healthy soil is the foundation of sustainable agriculture and long-term farming profitability. Our advisory services combine traditional agricultural practices with modern scientific methods to improve soil fertility, optimize nutrient management, enhance moisture retention, and increase crop productivity.",
+    title: "Turnkey Project Delivery (Food, Recycling & Sustainable Industries)",
     bulletPoints: [
-      "Improved soil vitality",
-      "Higher crop yields",
-      "Reduced input costs",
+      "Food Processing & Agri-Industry Projects",
+      "Recycling & Waste Management Units",
+      "Sustainable & Clean Energy Solutions",
       "Better water retention",
       "Sustainable nutrient management",
       "Long-term agricultural resilience",
@@ -204,29 +188,26 @@ export const serviceCategories: ServiceCategory[] = [
   },
   {
     id: "agri-tourism-farm-development",
-    title: "Integrated Agri-Tourism & Farm Development",
-    description:
-      "We specialize in comprehensive master planning solutions that create multiple revenue streams for landowners and agricultural investors.",
+    title: "Key Differentiators",
     subsections: [
       {
-        title: "High-Value Agricultural Development",
-        intro: "We design and develop:",
+        title: " Single-Window Execution",
+        intro: "We provide end-to-end solutions for:",
         items: [
-          "Organic farming ecosystems",
-          "Managed orchards",
-          "Farm-to-table production models",
-          "Sustainable agricultural infrastructure",
+          "Integrated management spanning property",
+          "Finance",
+          "Operations",
+          "sustainable industries",
         ],
       },
       {
         title: "Eco-Tourism & Experiential Destinations",
-        intro: "We create engaging visitor experiences through:",
+        intro: "Active focus and localized capabilities across:",
         items: [
-          "Wellness retreats",
-          "Nature-based tourism concepts",
-          "Eco-resorts and farm stays",
-          "Interactive farming experiences",
-          "Educational agricultural workshops",
+          "Hubli",
+          "Mysore",
+          "Sirsi",
+          "Key Karnataka corridors",
         ],
       },
     ],
